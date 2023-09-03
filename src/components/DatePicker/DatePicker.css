@@ -1,0 +1,11 @@
+.calenderContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2vh;
+}
+
+.react-calendar {
+    background-color: rgba(165, 160, 160, 0.249) !important;
+    width: 20rem !important;
+}
