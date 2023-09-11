@@ -10,7 +10,7 @@ function ImagesGrid() {
     const images: Image[] = useSelector(
         (state: RootState) => state.images
     );
-
+ 
     const dispatch = useDispatch();
 
     const onLoad = async () => {
@@ -18,6 +18,7 @@ function ImagesGrid() {
             dispatch(loadMoreImages(result));
         }).catch(err => {
             console.log(err);
+            throw new Error(`Failed gallery load: ${err.message}`);
         })
     }
 

@@ -21,6 +21,7 @@ function DatePicker() {
       dispatch(resetImages(result));
     }).catch(err => {
       console.log(err);
+      throw new Error(`Failed gallery reload: ${err.message}`);
     })
   }
 
